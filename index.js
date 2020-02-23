@@ -15,13 +15,20 @@ var messages = [];
 
 IO.on("connection", socket => {
 
+  socket.on("load", () => {
+    socket.emit("messages", messages);
+  })
+
   socket.on("message", data => {
     messages.push({username: data.username, content: data.message})
     IO.emit("message", messages)
   })
 
-  socket.on("load", () => {
-    socket.emit("messages", messages);
+  socket.on("onChange", data => {
+  socket.broadcast.emit("onChange", data.username)
+  })
+  socket.on("onBlur", data => {
+    socket.broadcast.emit("onBlur", data.username)
   })
 })
 

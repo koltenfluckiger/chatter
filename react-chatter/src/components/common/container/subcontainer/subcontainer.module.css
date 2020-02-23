@@ -29,16 +29,12 @@
   }
 }
 
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
 .subcontainer {
   display: flex;
   transition: all .5s ease;
-  padding: 2.5rem 0rem;
+  padding: 0 5rem;
   height: inherit;
   width: inherit;
   flex-direction: column;
+  justify-content: center;
 }

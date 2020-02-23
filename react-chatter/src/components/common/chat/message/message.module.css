@@ -25,7 +25,13 @@
   align-self: flex-end;
   background-color: rgba(33, 106, 224, 1);
 }
-.username {
+.usernameLeft {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+.usernameRight{
   color: #FFF;
   font-size: 1rem;
   font-weight: 500;
