@@ -27,4 +27,13 @@ time, mark, audio, video {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	color: inherit;
 }
+html {
+	background-color: rgba(27, 28, 29, 1);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* 33, 106, 224 , 75, 75 ,75*/

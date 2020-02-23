@@ -1,30 +1,50 @@
 import React, {Component} from 'react';
-import socketIOClient from "socket.io-client";
+import {withSocketContext, withUserContext} from "../higher-order-components";
+import {Chat, Container} from "../common";
 
 import "./index.css";
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
+
     this.state = {
-      connected: false,
-      host: '127.0.0.1'
+      messages: [],
+      loading: false
     }
   }
 
-  componentDidMount(){
-    const socket = socketIOClient("http://localhost:3000");
-    socket.on("connection", socket => {
-      console.log(socket);
+  componentDidMount() {
+    var self = this;
+    const socket = this.props.socket;
+    socket.emit("load");
+    socket.on("messages", data =>{
+      self.setState({messages: data});
+    })
+    socket.on("message", data => {
+      self.setState({messages: data});
     })
   }
 
   render() {
-    return (
-    <div></div>
-    )
+    const {messages} = this.state;
+    return (<Container>
+      <Container.SubContainer variant={{
+          classes: "subcontainer center"
+        }}>
+        <Chat>
+          {
+            messages.map(
+              message => message.username !== this.props.username
+              ? <Chat.Message text={message.content} username={message.username} incoming/>
+              : <Chat.Message text={message.content} username={message.username} outgoing/>)
+          }
+        </Chat>
+        <Chat.Entry/>
+      </Container.SubContainer>
+    </Container>)
   }
 }
 
-export default App;
+export default withUserContext(withSocketContext(App));

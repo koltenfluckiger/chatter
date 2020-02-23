@@ -1,0 +1,16 @@
+.input {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: inherit;
+  height: inherit;
+  padding: 0 1rem;
+}
+
+.inputContainer {
+  height: 2.4rem;
+  width: inherit;
+  background-color: #4b4b4b;
+  border-radius: 1rem;
+}

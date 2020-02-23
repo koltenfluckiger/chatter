@@ -1,0 +1,44 @@
+@media screen and (min-width: 120rem) {
+  .subcontainer {
+    max-width: 114rem;
+  }
+}
+
+@media screen and (max-width: 119.9rem) and (min-width: 99.2rem) {
+  .subcontainer {
+    max-width: 96rem;
+  }
+}
+
+@media screen and (max-width: 99.1rem) and (min-width: 76.8rem) {
+  .subcontainer {
+    max-width: 72rem;
+  }
+}
+
+@media screen and (max-width:99.1rem) {
+  .subcontainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .subcontainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.subcontainer {
+  display: flex;
+  transition: all .5s ease;
+  padding: 2.5rem 0rem;
+  height: inherit;
+  width: inherit;
+  flex-direction: column;
+}

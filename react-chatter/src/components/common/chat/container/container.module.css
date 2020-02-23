@@ -1,0 +1,7 @@
+.container {
+  height: 60%;
+  width: inherit;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
