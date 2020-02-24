@@ -32,4 +32,4 @@ IO.on("connection", socket => {
   })
 })
 
-Server.listen(3001, "localhost");
+Server.listen(3001, "0.0.0.0");

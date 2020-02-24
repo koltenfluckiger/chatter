@@ -22,6 +22,9 @@ class App extends Component {
     username = username === null
       ? "Guest" + String((Math.floor(Math.random() * 1000)))
       : username;
+      username = username === ""
+        ? "Guest" + String((Math.floor(Math.random() * 1000)))
+        : username;
     this.setState({username: username});
   }
 
