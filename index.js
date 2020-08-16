@@ -7,7 +7,6 @@ const App = Express();
 
 
 App.use(Express.static(Path.join(__dirname, "react-chatter", "public")));
-App.use(Cors());
 const Server = HTTP.createServer(App);
 const IO = SocketIO(Server);
 
@@ -32,4 +31,4 @@ IO.on("connection", socket => {
   })
 })
 
-Server.listen(3001, "0.0.0.0");
+Server.listen(3005, "0.0.0.0");

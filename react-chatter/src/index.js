@@ -6,7 +6,7 @@ import socketIOClient from "socket.io-client";
 
 import App from "./components/app";
 import * as serviceWorker from "./serviceWorker";
-const IO = socketIOClient("http://192.168.1.56:3000");
+const IO = socketIOClient("http://192.168.1.55:3005");
 
 ReactDOM.render(<SocketContext.Provider value={IO}>
   ><App/>
