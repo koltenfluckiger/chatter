@@ -1,0 +1,6 @@
+.seperator {
+  height: 0.1rem;
+  background: linear-gradient(90deg, white, #dddddd, white);
+  width: 100%;
+  display: inline-block;
+}

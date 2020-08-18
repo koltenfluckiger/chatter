@@ -1,3 +1,12 @@
 import Chat from "./chat";
 import Container from "./container";
-export {Chat, Container};
+import Loading from "./loading";
+import Prompt from "./prompt";
+import Seperator from "./seperator";
+export {
+    Chat,
+    Container,
+    Loading,
+    Prompt,
+    Seperator
+};

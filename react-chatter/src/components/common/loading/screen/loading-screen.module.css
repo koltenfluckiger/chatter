@@ -1,0 +1,110 @@
+.loadingScreenContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.loadingSpinnerContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loadingSpinnerContainer * {
+  margin: 2.5rem 0rem;
+}
+
+.errorText {
+  animation: fadein 2s;
+}
+
+.loadingSpinner {
+  display: inline-block;
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+}
+
+.loadingSpinner div {
+  position: absolute;
+  top: 3.3rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: #4C87FC;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loadingSpinner div:nth-child(1) {
+  left: 0.8rem;
+  animation: loadingSpinner1 0.6s infinite;
+}
+
+.loadingSpinner div:nth-child(2) {
+  left: 0.8rem;
+  animation: loadingSpinner2 0.6s infinite;
+}
+
+.loadingSpinner div:nth-child(3) {
+  left: 3.2rem;
+  animation: loadingSpinner2 0.6s infinite;
+}
+
+.loadingSpinner div:nth-child(4) {
+  left: 5.6rem;
+  animation: loadingSpinner3 0.6s infinite;
+}
+
+@keyframes loadingSpinner1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loadingSpinner3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes loadingSpinner2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+/* Safari, Chrome and Opera > 12.1 */
+
+/* Internet Explorer */
+
+/* Opera < 12.1 */

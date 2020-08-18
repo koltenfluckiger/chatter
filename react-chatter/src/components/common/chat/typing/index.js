@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import styles from "./typing.module.css";
 
 class Typing extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const {username} = this.props;
@@ -13,7 +9,7 @@ class Typing extends Component {
       return null
     }
     return (
-    <p>{username} is typing...</p>
+    <p className={styles.typing}>{username} is typing...</p>
     )
   }
 }

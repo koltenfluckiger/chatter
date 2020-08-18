@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import ReactDOM from 'react-dom';
 
 const withChildren = (ParentComponent) => {
   return class extends Component {

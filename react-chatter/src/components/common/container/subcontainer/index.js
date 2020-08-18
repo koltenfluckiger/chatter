@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {withChildren} from "../../../higher-order-components";
 import ClassMapper from "sass-css-modules-class-mapper";
 

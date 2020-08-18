@@ -1,0 +1,9 @@
+.loader {
+  animation: opacity 1s ease-in 0s;
+}
+.loader-loading {
+  display: none;
+}
+.loader-loaded {
+  display: block;
+}

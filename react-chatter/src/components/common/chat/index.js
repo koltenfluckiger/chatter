@@ -9,10 +9,6 @@ import styles from "./chat.module.css";
 
 const Chat = withChildren(class extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const {render} = this.props;
     return (
@@ -24,4 +20,5 @@ const Chat = withChildren(class extends Component {
 Chat.Typing = Typing;
 Chat.Entry = Entry;
 Chat.Message = Message;
+
 export default Chat;
