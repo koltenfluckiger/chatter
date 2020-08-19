@@ -1,3 +1,5 @@
+require("./globals");
+
 const Path = require("path");
 const Express = require("express");
 const HTTP = require("http");
@@ -5,7 +7,6 @@ const SocketIO = require("socket.io");
 const Cors = require("cors");
 const App = Express();
 
-App.use(Express.static(Path.join(__dirname, "react-chatter", "public")));
 const Server = HTTP.createServer(App);
 const IO = SocketIO(Server);
 
@@ -40,4 +41,9 @@ IO.on("connection", socket => {
 
 })
 
-Server.listen(3005, "0.0.0.0");
+App.use(Express.static(global.buildPath));
+App.get("/*", (req, res) => {
+    return res.sendFile(global.buildPath + "/index.html");
+});
+
+Server.listen(3010, "0.0.0.0");
