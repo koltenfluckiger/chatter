@@ -14,7 +14,7 @@ class App extends Component {
 
         this.setUserName = (e) => {
             e.preventDefault();
-            const username = e.target.username.value;
+            const username = e.target.username.value ? e.target.username.value : `User${Math.floor(Math.random() * 10000)}`;
             this.setState({username: username})
         }
 
